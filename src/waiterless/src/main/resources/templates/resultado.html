@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submissão de Formulário</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Resultado</h1>
+    <p th:text="'id: ' + ${item.id}" />
+    <p th:text="'descricao: ' + ${item.descricao}" />
+    <p th:text="'classificacao: ' + ${item.classificacao}" />
+    <p th:text="'valor: ' + ${item.valor}" />    
+    <a href="/saudacao">Submeter outro formulário</a>
+</body>
+</html>
