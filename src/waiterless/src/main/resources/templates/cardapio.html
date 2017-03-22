@@ -6,11 +6,14 @@
 </head>
 <body>
 	<h1>Item Cardapio</h1>
-    <form action="#" th:action="@{/saudacao}" th:object="${saudacao}" method="post">
+    <form action="#" th:action="@{/cardapio}" th:object="${cardapio}" method="post">
     	<p>Id: <input type="text" th:field="*{id}" /></p>
         <p>Nome: <input type="text" th:field="*{nome}" /></p>
         <p>Descrição: <input type="text" th:field="*{descricao}" /></p>
-        <p>Classificação: <input type="text" th:field="*{classificacao}" /></p>
+        <p>Classificação: </p>
+        <p><input type="radio" name="classificacao" value="bebida" th:field="*{classificacao}" /> Bebida</p>
+        <p><input type="radio" name="classificacao" value="prato" th:field="*{classificacao}" /> Prato</p>
+        <p><input type="radio" name="classificacao" value="sobremesa" th:field="*{classificacao}" /> Sobremesa</p>
         <p>Valor: <input type="text" th:field="*{nome}" /></p>
         <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
     </form>
