@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Item implements Serializable{
@@ -19,7 +21,9 @@ public class Item implements Serializable{
 	private String descricao;
 	private String classificacao;
 	private double valor;
-	
+	@ManyToOne
+	@JoinColumn (name = "pedido_id")
+	private Pedido pedido;
 	protected Item(){}
 	
 	public Item(String nome, String descricao, 
