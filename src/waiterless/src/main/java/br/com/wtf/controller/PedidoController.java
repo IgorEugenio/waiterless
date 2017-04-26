@@ -13,7 +13,7 @@ import br.com.wtf.repository.PedidoRepository;
 
 @Controller
 public class PedidoController {
-	ArrayList<Item> cardapio = new ArrayList<>();
+	ArrayList<Item> listItens = new ArrayList<>();
 	@Autowired
 	private PedidoRepository pedidoRepository;
 	@Autowired
@@ -21,6 +21,6 @@ public class PedidoController {
 	
 	@RequestMapping(path = "/pedido", method = RequestMethod.GET)
 	public void listarItens(){
-		cardapio = (ArrayList<Item>) itemRepository.findAll();
+		listItens = (ArrayList<Item>) itemRepository.findAll();
 	}
 }
